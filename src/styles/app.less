@@ -1,0 +1,54 @@
+@import './var.less';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body {
+  font-weight: 400;
+  min-height: 100vh;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    Helvetica,
+    Segoe UI,
+    Arial,
+    Roboto,
+    'PingFang SC',
+    'miui',
+    'Hiragino Sans GB',
+    'Microsoft Yahei',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--van-background);
+  color: var(--van-text-color);
+}
+
+html {
+  background: var(--van-gray-1);
+  font-size: var(--van-font-size-lg);
+  color-scheme: light;
+}
+
+html.dark {
+  background: #222;
+  color-scheme: dark;
+}
+
+#app {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}

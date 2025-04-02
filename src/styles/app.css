@@ -1,0 +1,139 @@
+/**
+  注意：为什么要写两个重复的 :root？
+  由于 vant 中的主题变量也是在 :root 下声明的，所以在有些情况下会由于优先级的问题无法成功覆盖。
+  通过 :root:root 可以显式地让你所写内容的优先级更高一些，从而确保主题变量的成功覆盖。
+**/
+:root:root {
+  --van-cell-group-inset-padding: 0;
+}
+:root {
+  /* 主题色 */
+  --van-primary-color: #1989fa;
+  --van-success-color: #07c160;
+  --van-warning-color: #ff976a;
+  --van-danger-color: #ee0a24;
+  /* 文字颜色 */
+  --van-text-color: #323233;
+  --van-text-color-2: #969799;
+  --van-text-color-3: #c8c9cc;
+  --van-active-color: #f2f3f5;
+  /* 背景颜色 */
+  --van-background: #ffffff;
+  --van-background-2: #f7f8fa;
+  --van-background-3: #f2f3f5;
+  /* 边框颜色 */
+  --van-border-color: #ebedf0;
+  --van-border-color-light: #f5f6fa;
+  --van-border-color-dark: #dcdee0;
+  /* 按钮颜色 */
+  --van-button-primary-background-color: var(--van-primary-color);
+  --van-button-primary-border-color: var(--van-primary-color);
+  --van-button-primary-text-color: #ffffff;
+  --van-button-default-background-color: var(--van-background);
+  --van-button-default-border-color: var(--van-border-color);
+  --van-button-default-text-color: var(--van-text-color);
+  --van-button-danger-background-color: var(--van-danger-color);
+  --van-button-danger-border-color: var(--van-danger-color);
+  --van-button-danger-text-color: #ffffff;
+  /* 单元格颜色 */
+  --van-cell-background-color: var(--van-background);
+  --van-cell-text-color: var(--van-text-color);
+  --van-cell-border-color: var(--van-border-color);
+  /* 标签颜色 */
+  --van-tag-primary-color: var(--van-primary-color);
+  --van-tag-success-color: var(--van-success-color);
+  --van-tag-warning-color: var(--van-warning-color);
+  --van-tag-danger-color: var(--van-danger-color);
+  /* 加载颜色 */
+  --van-loading-color: var(--van-primary-color);
+  /* 通知栏颜色 */
+  --van-notify-background-color: var(--van-primary-color);
+  --van-notify-text-color: #ffffff;
+  /* 进度条颜色 */
+  --van-progress-color: var(--van-primary-color);
+  /* 开关颜色 */
+  --van-switch-on-color: var(--van-primary-color);
+  /* 复选框颜色 */
+  --van-checkbox-checked-icon-color: var(--van-primary-color);
+  /* 单选框颜色 */
+  --van-radio-checked-icon-color: var(--van-primary-color);
+  /* 滑块颜色 */
+  --van-slider-active-background-color: var(--van-primary-color);
+  /* 评分颜色 */
+  --van-rate-icon-full-color: var(--van-warning-color);
+  /* 步骤条颜色 */
+  --van-step-active-color: var(--van-primary-color);
+  /* 标签页颜色 */
+  --van-tabs-bottom-bar-color: var(--van-primary-color);
+  --van-tab-active-text-color: var(--van-primary-color);
+}
+/* 暗色模式 */
+.dark {
+  --van-primary-color: #66b7ff;
+  --van-success-color: #66db93;
+  --van-warning-color: #ffa566;
+  --van-danger-color: #f36666;
+  --van-text-color: #ffffff;
+  --van-text-color-2: #969799;
+  --van-text-color-3: #666666;
+  --van-active-color: #2c2c2c;
+  --van-background: #1c1c1e;
+  --van-background-2: #2c2c2e;
+  --van-background-3: #3a3a3c;
+  --van-border-color: #3a3a3c;
+  --van-border-color-light: #2c2c2e;
+  --van-border-color-dark: #1c1c1e;
+  --van-button-default-background-color: var(--van-background-2);
+  --van-button-default-border-color: var(--van-border-color);
+  --van-button-default-text-color: var(--van-text-color);
+  --van-cell-background-color: var(--van-background);
+  --van-cell-text-color: var(--van-text-color);
+  --van-cell-border-color: var(--van-border-color);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+body {
+  font-weight: 400;
+  min-height: 100vh;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    Helvetica,
+    Segoe UI,
+    Arial,
+    Roboto,
+    'PingFang SC',
+    'miui',
+    'Hiragino Sans GB',
+    'Microsoft Yahei',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--van-background);
+  color: var(--van-text-color);
+}
+html {
+  background: var(--van-gray-1);
+  font-size: var(--van-font-size-lg);
+  color-scheme: light;
+}
+html.dark {
+  background: #222;
+  color-scheme: dark;
+}
+#app {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
