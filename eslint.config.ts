@@ -23,6 +23,8 @@ export default antfu(
       'explicit-module-boundary-types': 'off',
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
+      'unused-imports/no-unused-vars': 'off',
+      'unused-imports/no-unused-imports': 'off',
       'no-console': 'off',
       'space-before-function-paren': 'off',
       'vue/attributes-order': 'off',
